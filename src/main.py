@@ -9,3 +9,7 @@ todo.Base.metadata.create_all(bind=engine)
 @app.get("/", status_code=200)
 async def root():
     return {"message": "I am alive"}
+
+@app.get("/get_all_todos", status_code=200)
+async def get_all_todos():
+    return {"message": "I am alive"}
